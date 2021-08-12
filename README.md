@@ -1,19 +1,13 @@
-# weather-test-app-vue
+# Страница прогноза погоды на Vue
 
-## Project setup
+## Установка проекта
+Для установки проекта необходимо перейти в корневую папку проекта и ввести следующую команду
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Запуск проекта
+Для запуска проекта необходимо перейти в корневую папку проекта и ввести следующую команду
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
