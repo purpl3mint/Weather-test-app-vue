@@ -1,5 +1,7 @@
 import { createStore } from 'vuex'
 import axios from 'axios'
+import ruLocale from '@/locales/ru'
+import enLocale from '@/locales/en'
 
 export default createStore({
   state: {
@@ -9,6 +11,10 @@ export default createStore({
     loading: false,
     apikey: "7ddbbac4414598a0582efd0c12096e75",
     language: "ru",
+    locale: {
+      "ru": ruLocale,
+      "en": enLocale
+    }
   },
   mutations: {
     setCityName(state, cityName) {
@@ -20,12 +26,10 @@ export default createStore({
   },
   actions: {
     async getNewCity({state, commit}, newCityName) {
+      if (newCityName === "")
+        return
       try {
         commit('toggleLoading')
-
-        if (newCityName === "") {
-          throw new Error("Отсутствует название города")
-        }
 
         const responseCurrent = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${newCityName}&appid=${state.apikey}&lang=${state.language}`)
         const responseFuture = await axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${newCityName}&appid=${state.apikey}&lang=${state.language}`)

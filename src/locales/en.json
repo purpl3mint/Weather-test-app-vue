@@ -1,0 +1,15 @@
+{
+  "weather forecast": "Weather forecast",
+  "language ru": "Russian",
+  "language en": "English",
+  "input name": "Input city name",
+  "search": "Find",
+  "loading": "Loading...",
+  "weather now": "Weather now",
+  "weather future": "Weather in the coming hours (local time)",
+  "temperature": "Temperature",
+  "humidity": "Humidity",
+  "wind": "Wind",
+  "date": "Date",
+  "speed": "m/s"
+}

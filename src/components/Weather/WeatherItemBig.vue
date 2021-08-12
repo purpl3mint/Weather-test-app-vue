@@ -1,13 +1,33 @@
 <template>
   <div class="weather-item_big">
     <div class="weather-item__header_big">
-      <img class="weather-item__icon_big" :src="this.$store.state.cityWeatherNow.iconurl" alt="Weather icon">
-      <span class="weather-item__description_big">{{this.$store.state.cityWeatherNow.description}}</span>
+      <img 
+        class="weather-item__icon_big" 
+        :src="this.$store.state.cityWeatherNow.iconurl" 
+        alt="Weather icon"
+      >
+      <span class="weather-item__description_big">
+        {{this.$store.state.cityWeatherNow.description}}
+      </span>
     </div>
-    <p class="weather-item__temperature_big">{{locale[this.$store.state.language]["temperature"]}}: {{this.$store.state.cityWeatherNow.temperature}}&#176;С</p>
-    <p class="weather-item__humidity_big">{{locale[this.$store.state.language]["humidity"]}}: {{this.$store.state.cityWeatherNow.humidity}}%</p>
-    <p class="weather-item__wind_big">{{locale[this.$store.state.language]["wind"]}}: {{this.$store.state.cityWeatherNow.wind}} {{locale[this.$store.state.language]["speed"]}}</p>
-    <p class="weather-item__date_big">{{locale[this.$store.state.language]["date"]}}: {{this.$store.state.cityWeatherNow.date.getDate()}}.{{this.$store.state.cityWeatherNow.date.getMonth()+1}}.{{this.$store.state.cityWeatherNow.date.getFullYear()}}</p>
+    <p class="weather-item__temperature_big">
+      {{locale[this.$store.state.language]["temperature"]}}: 
+      {{this.$store.state.cityWeatherNow.temperature}}&#176;С
+    </p>
+    <p class="weather-item__humidity_big">
+      {{locale[this.$store.state.language]["humidity"]}}: 
+      {{this.$store.state.cityWeatherNow.humidity}}%
+    </p>
+    <p class="weather-item__wind_big">
+      {{locale[this.$store.state.language]["wind"]}}: 
+      {{this.$store.state.cityWeatherNow.wind}} {{locale[this.$store.state.language]["speed"]}}
+    </p>
+    <p class="weather-item__date_big">
+      {{locale[this.$store.state.language]["date"]}}: 
+      {{this.$store.state.cityWeatherNow.date.getDate()}}.
+      {{this.$store.state.cityWeatherNow.date.getMonth()+1}}.
+      {{this.$store.state.cityWeatherNow.date.getFullYear()}}
+    </p>
   </div>
 </template>
 
@@ -15,23 +35,7 @@
 export default {
   data() {
     return {
-      locale: {
-        "ru": {
-          "temperature": "Температура",
-          "humidity": "Влажность",
-          "wind": "Ветер",
-          "date": "Дата",
-          "speed": "м/с"
-        },
-        "en": {
-          "weather now": "Weather now",
-          "temperature": "Temperature",
-          "humidity": "Humidity",
-          "wind": "Wind",
-          "date": "Date",
-          "speed": "m/s"
-        }
-      }
+      locale: this.$store.state.locale
     }
   }
 }

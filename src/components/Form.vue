@@ -1,7 +1,9 @@
 <template>
   <div class="form">
     <input class="form__input" v-model="newCityName" type="text" :placeholder="placeholder"/>
-    <button class="form__button" @click="getNewCity">{{locale[this.$store.state.language]["search"]}}</button>
+    <button class="form__button" @click="getNewCity">
+      {{locale[this.$store.state.language]["search"]}}
+    </button>
   </div>
 </template>
 
@@ -10,16 +12,7 @@ export default {
   data() {
     return {
       newCityName: "",
-      locale: {
-        "ru": {
-          "input name": "Введите название города",
-          "search": "Найти"
-        },
-        "en": {
-          "input name": "Input city name",
-          "search": "Find"
-        }
-      }
+      locale: this.$store.state.locale
     }
   },
   methods: {

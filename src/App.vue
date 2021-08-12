@@ -3,9 +3,7 @@
   <div class="content-wrapper">
     <Form/>
     <Loader  v-if="this.$store.state.loading"/>
-    <Weather 
-      v-else-if="this.$store.state.cityName" 
-    />
+    <Weather v-else-if="this.$store.state.cityName"/>
   </div>
 </template>
 
@@ -18,20 +16,6 @@ import Form from '@/components/Form'
 export default {
   components: {
     Navbar, Loader, Weather, Form
-  },
-  data() {
-    return {
-      locale: {
-        "ru": {
-          "input name": "Введите название города",
-          "search": "Найти"
-        },
-        "en": {
-          "input name": "Input city name",
-          "search": "Find"
-        }
-      }
-    }
   }
 }
 </script>

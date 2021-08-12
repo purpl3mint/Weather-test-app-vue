@@ -1,0 +1,15 @@
+{
+  "weather forecast": "Прогноз погоды",
+  "language ru": "Русский",
+  "language en": "Английский",
+  "input name": "Введите название города",
+  "search": "Найти",
+  "loading": "Загрузка...",
+  "weather now": "Погода сейчас",
+  "weather future": "Погода в ближайшие часы (время местное)",
+  "temperature": "Температура",
+  "humidity": "Влажность",
+  "wind": "Ветер",
+  "date": "Дата",
+  "speed": "м/с"
+}

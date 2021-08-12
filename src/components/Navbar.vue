@@ -1,9 +1,21 @@
 <template>
   <nav class="nav">
-    <h1 class="nav__title">{{locale[this.$store.state.language]["weather forecast"]}}</h1>
-    <select name="language" id="language" class="nav__language" v-model="languageCurrent" @change="changeLanguage">
-      <option value="ru" selected>{{locale[this.$store.state.language]["language ru"]}}</option>
-      <option value="en">{{locale[this.$store.state.language]["language en"]}}</option>
+    <h1 class="nav__title">
+      {{locale[this.$store.state.language]["weather forecast"]}}
+    </h1>
+    <select 
+      name="language" 
+      id="language" 
+      class="nav__language" 
+      v-model="languageCurrent" 
+      @change="changeLanguage"
+    >
+      <option value="ru" selected>
+        {{locale[this.$store.state.language]["language ru"]}}
+      </option>
+      <option value="en">
+        {{locale[this.$store.state.language]["language en"]}}
+        </option>
     </select>
   </nav>
 </template>
@@ -13,18 +25,7 @@ export default {
   data() {
     return {
       languageCurrent: this.$store.state.language,
-      locale: {
-        "ru": {
-          "weather forecast": "Прогноз погоды",
-          "language ru": "Русский",
-          "language en": "Английский"
-        },
-        "en": {
-          "weather forecast": "Weather forecast",
-          "language ru": "Russian",
-          "language en": "English"
-        }
-      }
+      locale: this.$store.state.locale
     }
   },
   methods: {

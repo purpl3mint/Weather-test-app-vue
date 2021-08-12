@@ -8,14 +8,7 @@
 export default {
   data() {
     return {
-      locale: {
-        "ru": {
-          "loading": "Загрузка..."
-        },
-        "en": {
-          "loading": "Loading..."
-        }
-      }
+      locale: this.$store.state.locale
     }
   }
 }
